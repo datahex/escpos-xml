@@ -1,6 +1,6 @@
 {
   "name": "@datahex/escpos-xml",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "description": "ESC/POS with XML interface",
   "homepage": "https://github.com/datahex/escpos-xml#README",
   "author": "DataHex Tecnologia",
