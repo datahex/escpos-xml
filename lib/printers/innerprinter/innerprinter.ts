@@ -20,4 +20,16 @@ export default class InnerPrinter extends BufferBuilder {
         this.buffer.write(this.command.GS_L(0, 0)); // left spacing
         return this;
     }
+
+    printQRcode(data: string, version: number = 1, errorCorrectionLevel: number = this.command.QR_EC_LEVEL, componentTypes: number = 8): BufferBuilder {
+
+        this.buffer.write([  0x1B , 0x61 , 0x01 ,
+                        0x1D , 0x28 , 0x6B , 0x03 , 0x00 , 0x31 , 0x43 , 0x09 ,
+                        0x1D , 0x28 , 0x6B , 0x03 , 0x00 , 0x31 , 0x45 , 0x31 ,
+                        0x1D , 0x28 , 0x6B , data.length+3 , 0x00, 0x31 , 0x50 , 0x30]);
+        this.buffer.write(data, 'ascii');
+        this.buffer.write([0x1D , 0x28 , 0x6B , 0x03 , 0x00 , 0x31 , 0x51 , 0x30 , 0x0A ,0x1B , 0x61 , 0x00]);
+
+        return this;
+    }
 }
