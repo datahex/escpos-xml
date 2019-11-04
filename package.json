@@ -15,7 +15,7 @@
     "watch": "npm run webpack:watch",
     "webpack:build": "webpack --config webpack.config.js",
     "webpack:watch": "webpack --config webpack.config.js --watch",
-    "lint": "tslint --format codeFrame --type-check --project tslint.json lib/**/*.ts",
+    "lint": "tslint --format codeFrame --project tslint.json lib/**/*.ts",
     "prepublishOnly": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
