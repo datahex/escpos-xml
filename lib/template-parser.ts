@@ -1,6 +1,6 @@
-import * as handlebars from 'handlebars';
-import * as moment from 'moment';
-import * as numeral from 'numeral';
+import handlebars from 'handlebars';
+import moment from 'moment';
+import numeral from 'numeral';
 import 'numeral/locales/pt-br';
 import { cloneDeep } from 'lodash';
 import { XMLParser } from './xml-parser';
