@@ -1,4 +1,4 @@
-import parser from 'xml-parser';
+import parse from 'xml-parser';
 import { BufferBuilder } from './buffer-builder';
 import { XMLNode } from './xml-node';
 import { NodeFactory } from './node-factory';
@@ -11,7 +11,7 @@ export class XMLParser {
   }
 
   public parser(xml: string): BufferBuilder {
-    let parsedXML = parser(xml);
+    let parsedXML = parse(xml);
     return this.compile(parsedXML);
   }
 
